@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: canalplus-rdc
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .

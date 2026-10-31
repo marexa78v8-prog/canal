@@ -21,9 +21,55 @@
 }
 
 .plans-section [role="dialog"] {
+  overflow: hidden auto !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 1.25rem !important;
+  background: linear-gradient(155deg, #202023 0%, #111113 48%, #09090a 100%) !important;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(229, 9, 20, 0.35), 0 0 36px rgba(229, 9, 20, 0.12) !important;
   animation: none !important;
   opacity: 1 !important;
   transform: none !important;
+}
+
+.plans-section [role="dialog"] > header {
+  border-bottom-color: rgba(229, 9, 20, 0.35) !important;
+  background-color: rgba(31, 31, 34, 0.98) !important;
+}
+
+.plans-section [role="dialog"] > header h2 {
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.plans-section [role="dialog"] > div > div:first-child {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.plans-section [role="dialog"] > div > div:first-child label {
+  color: #fff !important;
+  font-size: 0.95rem;
+}
+
+.plans-section [role="dialog"] #decoder-number {
+  border: 2px solid #e50914 !important;
+  background-color: #fff !important;
+  color: #171717 !important;
+  font-weight: 700;
+  box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.12);
+}
+
+.plans-section [role="dialog"] #decoder-number::placeholder {
+  color: #737373 !important;
+  opacity: 1;
+}
+
+.plans-section [role="dialog"] #decoder-number:focus {
+  border-color: #b80710 !important;
+  outline: 3px solid rgba(229, 9, 20, 0.24);
+  outline-offset: 2px;
 }
 
 .canalplus-orange-option {

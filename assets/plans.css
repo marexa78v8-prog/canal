@@ -41,14 +41,14 @@
   line-height: 1.35;
 }
 
-.plans-section [role="dialog"] > div > div:first-child {
+.plans-section [role="dialog"] .canalplus-modal-body > div:first-child {
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 1rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.07);
 }
 
-.plans-section [role="dialog"] > div > div:first-child label {
+.plans-section [role="dialog"] .canalplus-modal-body > div:first-child label {
   color: #fff !important;
   font-size: 0.95rem;
 }
@@ -70,6 +70,186 @@
   border-color: #b80710 !important;
   outline: 3px solid rgba(229, 9, 20, 0.24);
   outline-offset: 2px;
+}
+
+.canalplus-device-switch-wrap {
+  margin: 0 0 0.9rem;
+}
+
+.canalplus-device-title {
+  margin: 0 0 0.55rem;
+  color: #ffffff;
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.canalplus-device-switch {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.canalplus-device-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.7rem;
+  flex: 1;
+  min-height: 86px;
+  border: 2px solid transparent;
+  border-radius: 0.9rem;
+  padding: 0.7rem 0.8rem;
+  background: rgba(255, 255, 255, 0.02);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 180ms ease;
+}
+
+.canalplus-device-option.is-selected {
+  border-color: #ff3b3b;
+  background: linear-gradient(180deg, rgba(229, 9, 20, 0.18), rgba(255, 255, 255, 0.03));
+  box-shadow: inset 0 0 0 1px rgba(229, 9, 20, 0.25);
+}
+
+.canalplus-device-option.is-selected::after {
+  content: "✓";
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: #ff3b3b;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+.canalplus-device-option {
+  position: relative;
+}
+
+.device-art {
+  display: block;
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.8rem;
+  background: rgba(14, 16, 20, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.device-art img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #0d0d0f;
+}
+
+.device-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1.1;
+}
+
+@media (max-width: 540px) {
+  .plans-section [role="dialog"] {
+    border-radius: 1.2rem !important;
+  }
+
+  .plans-section [role="dialog"] > header {
+    padding: 1rem 1.1rem !important;
+  }
+
+  .plans-section [role="dialog"] > header h2 {
+    font-size: 1.35rem;
+    line-height: 1.2;
+  }
+
+  .plans-section [role="dialog"] .canalplus-modal-body > div:first-child {
+    padding: 0.8rem;
+    border-radius: 0.85rem;
+  }
+
+  .plans-section [role="dialog"] .canalplus-modal-body > div:first-child label {
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+
+  .plans-section [role="dialog"] #decoder-number {
+    border-width: 1px !important;
+    border-radius: 0.8rem !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #fff !important;
+    box-shadow: none !important;
+  }
+
+  .canalplus-device-switch {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+    padding: 0.2rem;
+  }
+
+  .canalplus-device-option {
+    min-height: 86px;
+    padding: 0.7rem 0.6rem;
+  }
+
+  .canalplus-device-option.is-selected {
+    box-shadow: inset 0 0 0 2px rgba(229, 9, 20, 0.9), 0 0 0 1px rgba(229, 9, 20, 0.35);
+  }
+
+  .device-art {
+    width: 44px;
+    height: 44px;
+  }
+
+  .device-name {
+    font-size: 1rem;
+  }
+
+  .device-brand {
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+  }
+
+  .canalplus-device-note {
+    font-size: 0.72rem;
+  }
+}
+
+.device-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.device-brand {
+  margin-top: 0.1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  opacity: 0.7;
+}
+
+.canalplus-device-note {
+  margin: 0.7rem 0 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .canalplus-orange-option {
@@ -463,5 +643,336 @@
 
   .plan-card:hover {
     transform: none;
+  }
+}
+
+.canalplus-modal-banner {
+  position: relative;
+  display: flex;
+  min-height: 10.5rem;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 1.5rem 2rem;
+  background:
+    linear-gradient(130deg, transparent 0 68%, rgba(229, 9, 20, 0.48) 68.2%, transparent 69.5%),
+    radial-gradient(ellipse at 78% 120%, rgba(229, 9, 20, 0.6), transparent 40%),
+    linear-gradient(105deg, #1a0002 0%, #080809 40%, #141414 100%);
+  color: #fff;
+}
+
+.canalplus-banner-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.canalplus-banner-logo {
+  font-size: clamp(2.4rem, 8vw, 4.7rem);
+  font-weight: 900;
+  letter-spacing: -0.07em;
+  line-height: 0.95;
+}
+
+.canalplus-banner-tagline {
+  margin-top: 0.35rem;
+  font-size: clamp(0.85rem, 2.8vw, 1.45rem);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.canalplus-banner-tv {
+  position: absolute;
+  right: 3.25rem;
+  bottom: 0;
+  width: 43%;
+  height: 92%;
+}
+
+.canalplus-tv-screen {
+  position: absolute;
+  top: 0;
+  right: 28%;
+  width: 76%;
+  height: 72%;
+  border: 3px solid #252b32;
+  border-radius: 0.25rem;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 15%, rgba(255, 255, 255, 0.16) 15.5% 16.5%),
+    repeating-linear-gradient(0deg, #1a2934 0 19%, #7795a2 20% 22%, #161a20 23% 25%);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.75);
+  transform: perspective(8rem) rotateY(-7deg);
+}
+
+.canalplus-banner-tv img {
+  position: absolute;
+  right: 0;
+  bottom: 0.2rem;
+  width: 67%;
+  height: auto;
+  filter: drop-shadow(0 0.4rem 0.5rem rgba(0, 0, 0, 0.65));
+}
+
+.canalplus-banner-close {
+  position: absolute !important;
+  z-index: 2;
+  top: 0.75rem;
+  right: 0.75rem;
+  color: #fff !important;
+}
+
+.canalplus-formula-eyebrow {
+  margin: 0 0 0.15rem;
+  color: #f0f0f0;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+@media (max-width: 540px) {
+  .plans-section [role="dialog"] {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    inset: 0.5rem !important;
+    width: auto !important;
+    height: calc(100dvh - 1rem) !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    overflow: auto !important;
+    border: 0 !important;
+    border-radius: 1.3rem !important;
+    background: #101113 !important;
+    box-shadow: none !important;
+  }
+
+  .plans-section [role="dialog"] > .canalplus-modal-banner {
+    order: 0;
+  }
+
+  .plans-section [role="dialog"] > header {
+    order: 1;
+  }
+
+  .plans-section [role="dialog"] > div:not(.canalplus-modal-banner) {
+    order: 2;
+  }
+
+  .canalplus-modal-banner {
+    min-height: 6rem;
+    padding: 0.8rem 1.25rem;
+  }
+
+  .canalplus-banner-logo {
+    font-size: clamp(2.35rem, 12vw, 3rem);
+  }
+
+  .canalplus-banner-tagline {
+    font-size: clamp(0.8rem, 4vw, 1rem);
+  }
+
+  .canalplus-banner-tv {
+    right: 2.5rem;
+    width: 42%;
+    height: 88%;
+  }
+
+  .canalplus-banner-close {
+    top: 0.25rem;
+    right: 0.25rem;
+  }
+
+  .plans-section [role="dialog"] > header {
+    display: block !important;
+    border: 1px solid #e50914 !important;
+    border-bottom-color: rgba(229, 9, 20, 0.55) !important;
+    border-radius: 1.25rem 1.25rem 0 0 !important;
+    padding: 0.9rem 1.35rem 0.65rem !important;
+    background: #191a1d !important;
+  }
+
+  .canalplus-formula-eyebrow {
+    font-size: 0.8rem;
+  }
+
+  .plans-section [role="dialog"] > header h2 {
+    margin: 0;
+    font-size: clamp(1.35rem, 6vw, 1.75rem);
+    font-weight: 850;
+    line-height: 1.1;
+  }
+
+  .plans-section [role="dialog"] > .canalplus-modal-body {
+    border: 1px solid #e50914;
+    border-top: 0;
+    border-radius: 0 0 1.25rem 1.25rem;
+    padding: 0.8rem 1.15rem 1rem;
+    background: linear-gradient(155deg, #101113 0%, #08090a 100%);
+  }
+
+  .plans-section [role="dialog"] .canalplus-modal-body > div:first-child {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  .canalplus-device-switch-wrap {
+    margin-bottom: 0.8rem;
+  }
+
+  .canalplus-device-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .canalplus-device-switch {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.45rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .canalplus-device-option {
+    min-width: 0;
+    min-height: 4.45rem;
+    gap: 0.35rem;
+    padding: 0.45rem 0.4rem;
+    border: 1px solid #45464a;
+    border-radius: 1.1rem;
+    background: #0e0f11;
+    font-size: 0.85rem;
+  }
+
+  .canalplus-device-option.is-selected {
+    border: 3px solid #f20d20;
+    padding: calc(0.45rem - 2px) calc(0.4rem - 2px);
+    padding-right: 1.2rem;
+    background: #0b0c0e;
+    box-shadow: none;
+  }
+
+  .canalplus-device-option.is-selected::after {
+    right: 0.25rem;
+    bottom: 0.2rem;
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.7rem;
+  }
+
+  .device-art {
+    width: clamp(2.5rem, 16vw, 3.8rem);
+    height: 2.8rem;
+    border: 0;
+    border-radius: 0.2rem;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .device-art img {
+    background: transparent;
+  }
+
+  .device-art svg {
+    width: 100%;
+    height: 100%;
+    color: #f4f4f4;
+  }
+
+  .device-name {
+    font-size: clamp(0.75rem, 3.8vw, 0.94rem);
+    font-weight: 800;
+    line-height: 1.15;
+  }
+
+  .device-text {
+    min-width: 0;
+  }
+
+  .device-brand {
+    font-size: 0.64rem;
+    letter-spacing: 0;
+  }
+
+  .plans-section [role="dialog"] .canalplus-modal-body > div:first-child label {
+    display: block;
+    margin: 0.85rem 0 0.4rem;
+    font-size: 1.15rem;
+    line-height: 1.2;
+  }
+
+  .plans-section [role="dialog"] #decoder-number {
+    min-height: 3.85rem;
+    border: 1px solid #8a8b8e !important;
+    border-radius: 0.9rem !important;
+    padding: 0.8rem 0.9rem !important;
+    background: #292a2d !important;
+    color: #fff !important;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: none !important;
+  }
+
+  .plans-section [role="dialog"] #decoder-number::placeholder {
+    color: #c3c4c6 !important;
+  }
+
+  .canalplus-device-note {
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+
+  .plans-section [role="dialog"] .canalplus-plan-summary {
+    margin-top: 1rem;
+    border: 1px solid #343538;
+    border-radius: 0.95rem;
+    padding: 0.75rem 0.95rem;
+    background: #030303;
+  }
+
+  .plans-section [role="dialog"] .canalplus-plan-summary p {
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .plans-section [role="dialog"] .canalplus-payment-section > p:first-child {
+    margin: 1rem 0 0.5rem;
+    font-size: clamp(0.82rem, 4vw, 1rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  .plans-section [role="dialog"] .canalplus-payment-options {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.6rem;
+  }
+
+  .plans-section [role="dialog"] .canalplus-airtel-option,
+  .plans-section [role="dialog"] .canalplus-orange-option {
+    min-height: 3.8rem;
+    justify-content: center;
+    border-radius: 0.9rem !important;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .plans-section [role="dialog"] .canalplus-airtel-option {
+    border: 2px solid #f20d20 !important;
+    background: rgba(229, 9, 20, 0.24) !important;
+  }
+
+  .plans-section [role="dialog"] .canalplus-orange-option {
+    border-color: #ef7900 !important;
+    background: rgba(239, 121, 0, 0.22) !important;
+  }
+
+  .canalplus-payment-error {
+    font-size: 0.85rem;
   }
 }
